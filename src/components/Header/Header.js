@@ -15,7 +15,7 @@ const Header = () => {
                 <ul style={{display:'flex'}}>
                     <li><button className="cartIcon"><FontAwesomeIcon icon={faShoppingCart} /></button></li>
                     <li><a href="#" className="logIn">Login</a></li>
-                    <li><a href="#" className="btn-danger">Sign Up</a></li>
+                    <li><a href="#" className="btn-danger signUpBtn">Sign Up</a></li>
                 </ul>
             </div>
         </div>
