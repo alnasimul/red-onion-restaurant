@@ -1,6 +1,7 @@
 const lunchItems = [
     {
     key: "lunchItem1",
+    category:"lunch",
     img:"https://drive.google.com/file/d/1mrAq5ZwzEWQSfq0Lvv5N64wa-JsyXLnW/view?usp=sharing",
     title:"Beaf Steak",
     description:"How we dream about our future",
@@ -8,6 +9,7 @@ const lunchItems = [
 },
 {
     key:"lunchItem2",
+    category:"lunch",
     img:"https://drive.google.com/file/d/18kfqgqaoJCosjsbVjtsr7loKioWW5jh-/view?usp=sharing",
     title:"Honey-Soy-Glazed Salmon with Peppers",
     description:"How we dream about our future",
@@ -15,6 +17,7 @@ const lunchItems = [
 },
 {
     key:"lunchItem3",
+    category:"lunch",
     img:"https://drive.google.com/file/d/1tmrEnVdabUbXkJ37R57xd4PwIOZfshGP/view?usp=sharing",
     title:"Tarragon-Rubbed-Salmon",
     description:"How we dream about our future",
@@ -23,6 +26,7 @@ const lunchItems = [
 },
 {
     key:"lunchItem4",
+    category:"lunch",
     img:"https://drive.google.com/file/d/1rJEUkWRreEwPiWriXNjFap2NGHPdU7Qw/view?usp=sharing",
     title:"Indian Lunch",
     description:"How we dream about our future",
@@ -31,6 +35,7 @@ const lunchItems = [
 },
 {
     key:"lunchItem5",
+    category:"lunch",
     img:"https://drive.google.com/file/d/13uA5fTOw0bWm0XJQSw1GiSTqgqwB9Yde/view?usp=sharing",
     title:"Fried Chicken Bento",
     description:"How we dream about our future",
@@ -39,6 +44,7 @@ const lunchItems = [
 },
 {
     key:"lunchItem6",
+    category:"lunch",
     img:"https://drive.google.com/file/d/1huUdx7_Osy3wi2wxHDiNgTGUhAh7WOW5/view?usp=sharing",
     title:"Healthy Meal Plan",
     description:"How we dream about our future",

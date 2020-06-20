@@ -1,6 +1,7 @@
 const dinnerItems = [
     {
     key:"dinnerItem1",
+    category:"dinner",
     img:"https://drive.google.com/file/d/1tXCIqMRxldjWPRCJ2oLQ89h4t0EnA_4l/view?usp=sharing",
     title:"Baked Chicken",
     description:"How we dream about our future",
@@ -8,6 +9,7 @@ const dinnerItems = [
 },
 {
     key:"dinnerItem2",
+    category:"dinner",
     img:"https://drive.google.com/file/d/1fqnU-gezIks65WlVr9TcbeVsxYs6bO8D/view?usp=sharing",
     title:"Lemony Salmon Piccata",
     description:"How we dream about our future",
@@ -15,6 +17,7 @@ const dinnerItems = [
 },
 {
     key:"dinnerItem3",
+    category:"dinner",
     img:"https://drive.google.com/file/d/1WPcu41JVcmthFTOXKZ9IjbGhY_bfcN_V/view?usp=sharing",
     title:"Garlic Butter Baked Salmon",
     description:"How we dream about our future",
@@ -23,6 +26,7 @@ const dinnerItems = [
 },
 {
     key:"dinnerItem4",
+    category:"dinner",
     img:"https://drive.google.com/file/d/1AiMIg_vjJDhxYCBK0UxpB4g7oPbimRQR/view?usp=sharing",
     title:"French fries with cheese",
     description:"How we dream about our future",
@@ -31,6 +35,7 @@ const dinnerItems = [
 },
 {
     key:"dinnerItem5",
+    category:"dinner",
     img:"https://drive.google.com/file/d/1IdsuDQ9Peram2tbWroJu2h0zBOM4ftsD/view?usp=sharing",
     title:"Pork Tenderloin with Quinoa Pilaf",
     description:"How we dream about our future",
@@ -38,6 +43,7 @@ const dinnerItems = [
 },
 {
     key:"dinnerItem6",
+    category:"dinner",
     img:"https://drive.google.com/file/d/1vgPahLwnYUP29-GYlt1FTXHucLexbsIS/view?usp=sharing",
     title:"Salmon with Grapefruit and Lentil Salad",
     description:"How we dream about our future",
