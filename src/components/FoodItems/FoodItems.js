@@ -1,21 +1,22 @@
 import React from 'react';
+import './FoodItems.css'
 
 const FoodItems = (props) => {
     console.log(props.product)
     const { img, title, description, price } = props.product;
     return (
-        <div className="row">
-            <div className="col-md-4">
-                <div className="card">
-                    <img src={img} className="card-img-top" alt="" />
-                    <div class="card-body">
-                        <h5 class="card-title">{title}</h5>
-                        <p class="card-text">{description}</p>
-                        <h3>{price}</h3>
-                    </div>
+
+           <div className="foodDetails" id="foodDetails">
+                <div className="foodImage">
+                    <img src={img} alt=""/>
                 </div>
-            </div>
-        </div>
+                <div className="foodInfo">
+                    <h6>{title}</h6>
+                    <p>{description}</p>
+                    <h4>${price}</h4>
+                </div>
+           </div>
+        
     );
 };
 

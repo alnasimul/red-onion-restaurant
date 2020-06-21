@@ -2,7 +2,7 @@ const dinnerItems = [
     {
     key:"dinnerItem1",
     category:"dinner",
-    img:"https://drive.google.com/file/d/1tXCIqMRxldjWPRCJ2oLQ89h4t0EnA_4l/view?usp=sharing",
+    img:"https://i.postimg.cc/W3sS25HJ/dinner1.png",
     title:"Baked Chicken",
     description:"How we dream about our future",
     price:9.99
@@ -10,7 +10,7 @@ const dinnerItems = [
 {
     key:"dinnerItem2",
     category:"dinner",
-    img:"https://drive.google.com/file/d/1fqnU-gezIks65WlVr9TcbeVsxYs6bO8D/view?usp=sharing",
+    img:"https://i.postimg.cc/15bHgmdS/dinner2.png",
     title:"Lemony Salmon Piccata",
     description:"How we dream about our future",
     price:10.99
@@ -18,7 +18,7 @@ const dinnerItems = [
 {
     key:"dinnerItem3",
     category:"dinner",
-    img:"https://drive.google.com/file/d/1WPcu41JVcmthFTOXKZ9IjbGhY_bfcN_V/view?usp=sharing",
+    img:"https://i.postimg.cc/zXy7Xb0p/dinner3.png",
     title:"Garlic Butter Baked Salmon",
     description:"How we dream about our future",
     price:6.99
@@ -27,7 +27,7 @@ const dinnerItems = [
 {
     key:"dinnerItem4",
     category:"dinner",
-    img:"https://drive.google.com/file/d/1AiMIg_vjJDhxYCBK0UxpB4g7oPbimRQR/view?usp=sharing",
+    img:"https://i.postimg.cc/zGWkTmmg/dinner4.png",
     title:"French fries with cheese",
     description:"How we dream about our future",
     price:8.99
@@ -36,7 +36,7 @@ const dinnerItems = [
 {
     key:"dinnerItem5",
     category:"dinner",
-    img:"https://drive.google.com/file/d/1IdsuDQ9Peram2tbWroJu2h0zBOM4ftsD/view?usp=sharing",
+    img:"https://i.postimg.cc/nzdKnpm6/dinner5.png",
     title:"Pork Tenderloin with Quinoa Pilaf",
     description:"How we dream about our future",
     price:12.99
@@ -44,7 +44,7 @@ const dinnerItems = [
 {
     key:"dinnerItem6",
     category:"dinner",
-    img:"https://drive.google.com/file/d/1vgPahLwnYUP29-GYlt1FTXHucLexbsIS/view?usp=sharing",
+    img:"https://i.postimg.cc/5y6B0Tqj/dinner6.png",
     title:"Salmon with Grapefruit and Lentil Salad",
     description:"How we dream about our future",
     price:11.99

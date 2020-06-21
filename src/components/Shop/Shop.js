@@ -14,7 +14,7 @@ const Shop = () => {
 
     useEffect(() => {
         setFoods(meals);
-    }, []);
+    }, [meals]);
 
     const currentFood = foods.filter(food => food.category === category);
 
@@ -27,13 +27,13 @@ const Shop = () => {
                     <div className="manageCategory">
                         <ul className="d-flex justify-content-center">
                             <li onClick={() => setCategory('breakfast')}>
-                                <a href=""  className={category === 'breakfast' ? 'active h6' : 'h6'}> Breakfast</a>
+                                <a href="#foodDetails"  className={category === 'breakfast' ? 'active h6' : 'h6'}> Breakfast</a>
                             </li>
-                            <li onclick={() => setCategory('lunch')}>
-                                <a href="" className={category === 'lunch' ? 'active h6' : 'h6'}> Lunch</a>
+                            <li onClick={() => setCategory('lunch')}>
+                                <a href="#foodDetails" className={category === 'lunch' ? 'active h6' : 'h6'}> Lunch</a>
                             </li>
                             <li onClick={() => setCategory('dinner')}>
-                                <a href="" className={category === 'dinner' ? 'active h6' : 'h6'}>Dinner</a>
+                                <a href="#foodDetails" className={category === 'dinner' ? 'active h6' : 'h6'}>Dinner</a>
                             </li>
                         </ul>
                     </div>

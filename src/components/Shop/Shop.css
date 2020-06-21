@@ -1,0 +1,9 @@
+.manageCategory ul li{
+    list-style: none;
+    margin: 30px 30px;
+}
+
+.manageCategory ul li a{
+    color:#d9534f;
+}
+

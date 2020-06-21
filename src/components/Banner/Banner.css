@@ -3,7 +3,7 @@
     background: url('../../bannerbackground.png');
     overflow: hidden;
     background-repeat: no-repeat;
-    width:100%;
+    width:90%;
     height:500px;
     display: inline-block;
 }
