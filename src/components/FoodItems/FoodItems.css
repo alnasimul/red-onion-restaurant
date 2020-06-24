@@ -1,17 +1,18 @@
 .foodDetails{
-    width:30%;
-    margin: 46px 25px;
+    width:25%;
+    margin: 55px 47px;
 }
 
 .foodImage img{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .foodDetails:hover{
-    box-shadow: 5px 10px 45px lightgrey;
+    box-shadow: 5px 30px 100px lightgrey;
     border-radius: 10px;
-    padding: 30px 20px;
+    padding: 20px 20px;
+    
 }
 
 .foodInfo{

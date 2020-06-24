@@ -9,10 +9,10 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <img src={logo} alt=""/>
+                <img src={logo} alt="" />
             </div>
             <div className="manageUser">
-                <ul style={{display:'flex'}}>
+                <ul style={{ display: 'flex' }}>
                     <li><button className="cartIcon"><FontAwesomeIcon icon={faShoppingCart} /></button></li>
                     <li><a href="#" className="logIn">Login</a></li>
                     <li><a href="#" className="btn-danger signUpBtn">Sign Up</a></li>

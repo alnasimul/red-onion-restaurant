@@ -7,3 +7,13 @@
     color:#d9534f;
 }
 
+.checkoutBtn{
+    position: absolute;
+    left: 638px;
+    top:1730px;
+    border: none;
+    padding: 5px 50px;
+    border-radius: 10px;
+
+}
+

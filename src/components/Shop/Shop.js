@@ -21,7 +21,7 @@ const Shop = () => {
 
 
     return (
-        <div>
+        <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <div className="manageCategory">
@@ -39,11 +39,15 @@ const Shop = () => {
                     </div>
                 </div>
             </div>
-            <div className="row">
+            <div className="row  ">
                 {
                     currentFood.map(food => <FoodItems product={food} key={food.key}></FoodItems>)
                 }
+
+                <button className="checkoutBtn btn-danger">Checkout Your Food</button>
             </div>
+
+
         </div>
     );
 };
