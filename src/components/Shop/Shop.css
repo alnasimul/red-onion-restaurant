@@ -7,6 +7,12 @@
     color:#d9534f;
 }
 
+.manageCategory ul li a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+
 .checkoutBtn{
     position: absolute;
     left: 638px;
