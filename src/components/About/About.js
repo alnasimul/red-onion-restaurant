@@ -34,7 +34,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="quarter-width special-height">
+                    <div className="special-width">
                         <div>
                             <img src={img2} alt=""/>
                         </div>
