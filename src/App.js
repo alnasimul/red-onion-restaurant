@@ -13,6 +13,7 @@ import Shop from './components/Shop/Shop';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             <Banner></Banner>
             <Shop></Shop>
             <About></About>
+          </Route>
+          <Route path="/product/:productKey">
+            <ProductDetails></ProductDetails>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

@@ -1,0 +1,56 @@
+
+.productDetails{
+    display: flex;
+    margin: 80px 0;
+}
+.productPriceQuantity{
+    display: flex;
+}
+.productInfo{
+    text-align: initial;
+    width: 70%;
+    margin-left: 45px;
+    margin-top: 73px;
+}
+.productImage img{
+    width:70%;
+    margin-left: 130px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 14px lightgrey;
+    border-radius: 215px;
+}
+
+.price h2{
+    margin-right: 20px;
+}
+
+.quantity{
+    display: flex;
+}
+
+.form-control{
+    text-align: center;
+}
+
+#quantityNumber{
+    width: 50%;
+    height:45px;
+    border-radius: 1.25rem;
+}
+
+.minusIcon{
+    color:#bd2130;
+    position: absolute;
+    top: 403px;
+    left: 380px;
+    cursor: pointer;
+}
+
+.plusIcon{
+    color:#bd2130;
+    position: absolute;
+    top: 403px;
+    width:20px;
+    left:430px;
+    cursor: pointer;
+}
