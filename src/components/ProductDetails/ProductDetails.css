@@ -13,10 +13,10 @@
     margin-top: 73px;
 }
 .productImage img{
-    width:70%;
+    width:400px;
     margin-left: 130px;
     margin-top: 20px;
-    box-shadow: 10px 10px 14px lightgrey;
+    box-shadow: 70px 115px -6px lightgrey;
     border-radius: 215px;
 }
 

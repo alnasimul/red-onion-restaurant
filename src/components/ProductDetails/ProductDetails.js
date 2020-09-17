@@ -5,13 +5,32 @@ import { useParams } from 'react-router-dom';
 import fakeData from '../../fakeData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus,faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { addToDatabaseCart } from '../../utilities/databaseManager';
+import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
+import { useEffect } from 'react';
 
 const ProductDetails = () => {
     let { productKey } = useParams();
     let product = fakeData.find(pd => pd.key === productKey);
     const [quantity, setQuantity] = useState(0);
     const { title, description, img, price,key } = product;
+
+    //data loading from databaseManager.js using useEffect method
+
+    useEffect(() => {
+        const previousCart = getDatabaseCart();
+        console.log(previousCart);
+        const foodKeys = Object.keys(previousCart);
+        console.log(foodKeys);
+        const currentItemKey = foodKeys.find(id => id === key);
+        console.log(currentItemKey);
+        if(currentItemKey){
+           const currentCount =  previousCart[currentItemKey];
+           setQuantity(currentCount);
+        }
+
+        console.log(previousCart);
+        
+    },[])
 
     // quantity subtraction method
 

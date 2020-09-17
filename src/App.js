@@ -14,6 +14,7 @@ import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/product/:productKey">
             <ProductDetails></ProductDetails>
+          </Route>
+          <Route path = '/cart'>
+              <Cart></Cart>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
