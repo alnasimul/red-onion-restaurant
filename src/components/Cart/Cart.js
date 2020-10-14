@@ -3,16 +3,20 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import fakeData from '../../fakeData'
 import { getDatabaseCart } from '../../utilities/databaseManager';
+import './Cart.css';
 
 const Cart = () => {
 
     const [cartFoods,setCartFoods] = useState([]);
 
+    let previousCart = [];
 
     useEffect( () => {
-        //console.log(fakeData);
-        let previousCart = getDatabaseCart();
+        previousCart = getDatabaseCart();
+        console.log(previousCart);
         const foodKeys = Object.keys(previousCart);
+
+        console.log(foodKeys);
 
         const foods = foodKeys.map( key => {
             const food = fakeData.find ( singleFood => singleFood.key === key  );
@@ -25,47 +29,66 @@ const Cart = () => {
 
         setCartFoods(foods);
        
-    },[])
+    },[previousCart.lenght])
 
-    let subtotal = 0;
+   let subTotal = 0;
+
+   console.log(cartFoods);
+
+
 
     const calculateSubTotal = () => {
-        cartFoods.map( food => subtotal = subtotal + (food.quantity * food.price));
-        return subtotal.toFixed(2);
+        cartFoods.map( food => subTotal = subTotal + (food.quantity * food.price));
+        return subTotal.toFixed(2);
     }
+
+    calculateSubTotal();
+
+    console.log(subTotal);
 
     let tax = 0 ;
 
     const calculateTax = () => {
-        tax = subtotal * 0.15;
+        tax = subTotal * 0.15;
 
         return tax.toFixed(2);
     }
 
-    let deliveryFee = 0 ;
+    calculateTax();
 
-    const calculateDeliveryFee = () => {
-        if( subtotal < 100 && subtotal > 70){
-            deliveryFee = 0;
-        }else if( subtotal < 70 && subTotal > 50){
-            deliveryFee = 2;
-        }
-        else if( subtotal < 50 && subTotal > 30){
-            deliveryFee = 5;
-        }
-        else if( subtotal < 30 && subTotal > 5){
-            deliveryFee = 10;
-        }else {
-            deliveryFee = 0 ;
-        }
+    console.log(tax);
 
-        return deliveryFee;
+    
+
+    console.log(subTotal);
+    let fee = 0;
+    const deliveryFee = () => {
+        if(subTotal < 10 && subTotal > 0) {fee = 0}
+        else if(subTotal < 50 && subTotal > 10) {fee = 5}
+        else if(subTotal < 100 && subTotal > 50) {fee = 10}
+        else if(subTotal < 500 && subTotal > 100) {fee = 15}
+        else fee = 0
+        return fee;
     }
 
-    console.log(cartFoods);
+    deliveryFee();
+
+    console.log(fee);
+    
     return (
-        <div>
-            
+        <div className="container main-cart">
+               <div className="delivery-information">
+                    <h3>Edit Delivery Address</h3>
+                    <form>
+                            <input type="text" name="method" placeholder="Deliver to:"/>
+                            <input type="text" name="address" placeholder="Street Name:"/>
+                            <input type="text" name="additional info" placeholder="House No./Flat/floor no."/>
+                            <input type="text" name="clientName" placeholder="Business Name"/>
+                            <input type="text" name="instruction" placeholder="Add Delivery Instruction"/>
+                            <input type="submit" value="Save and Continue" />
+                    </form>
+                </div>
+
         </div>
     );
 };
