@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import fakeData from '../../fakeData'
 import { getDatabaseCart } from '../../utilities/databaseManager';
+import CartItems from '../CartItems/CartItems';
 import './Cart.css';
 
 const Cart = () => {
@@ -88,7 +89,31 @@ const Cart = () => {
                             <input type="submit" value="Save and Continue" />
                     </form>
                 </div>
+                <div>
 
+                </div>
+                <div className="review-cart">
+                    <p>From <b>Gulshan Plaza</b></p>
+                    <p>Arriving in 30-40 minutes</p>
+                    <p>107 road no 8</p>
+                        {
+                            cartFoods.map(currentFood => <CartItems key = {currentFood.id} currentFood = {currentFood}></CartItems> )
+                        }
+                    <div className="summary">
+                    <div className="section-name">
+                        <h4>Subtotal: </h4>
+                        <h4>tax: </h4>
+                        <h4>Delivery Fee: </h4>
+                        <h4>Total: </h4>
+                    </div>
+                    <div className="amount">
+                        <h4>{calculateSubTotal()}</h4>
+                        <h4>{calculateTax()}</h4>
+                        <h4>{deliveryFee()}</h4>
+                        <h4>{(subTotal+tax+fee).toFixed(2)}</h4>
+                    </div>
+                </div>
+                </div>
         </div>
     );
 };
