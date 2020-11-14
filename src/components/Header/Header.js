@@ -3,17 +3,23 @@ import './Header.css';
 import logo from '../../logo2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
+import { Link , NavLink} from 'react-router-dom';
 
 const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <img src={logo} alt="" />
+                <Link to="/">
+                     <img src={logo} alt="" />
+                </Link>
             </div>
             <div className="manageUser">
                 <ul style={{ display: 'flex' }}>
-                    <li><button className="cartIcon"><FontAwesomeIcon icon={faShoppingCart} /></button></li>
+                    <li>
+                        <NavLink to="/cart">
+                            <button className="cartIcon"><FontAwesomeIcon icon={faShoppingCart} /></button>
+                        </NavLink>
+                    </li>
                     <li><a href="#" className="logIn">Login</a></li>
                     <li><a href="#" className="btn-danger signUpBtn">Sign Up</a></li>
                 </ul>

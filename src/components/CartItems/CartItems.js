@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import fakeData from '../../fakeData';
 import { addToDatabaseCart, getDatabaseCart,removeFromDatabaseCart} from '../../utilities/databaseManager';
 import './CartItems.css';
@@ -20,6 +20,7 @@ const CartItems = (props) => {
         console.log(currentFood);
         addToDatabaseCart(clickedId, currentQuantity);
         getDatabaseCart();
+        props.cartPlusChange();
     }
 
     const handleSub = clickedId => {
@@ -31,6 +32,7 @@ const CartItems = (props) => {
             currentFood.quantity = currentQuantity;
             addToDatabaseCart(clickedId, currentQuantity);
             getDatabaseCart();
+            props.cartSubChange();
 
             if(quantityCount === 0) {
                 removeFromDatabaseCart(clickedId);

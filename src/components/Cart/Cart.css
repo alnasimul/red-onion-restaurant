@@ -5,7 +5,6 @@
   }
   
   .delivery-information h3 {
-    border-bottom: 1px solid darkgrey;
     padding-bottom: 20px;
   }
   
@@ -21,3 +20,11 @@
   .place-order {
     width: 400px;
   }
+
+ .red-button{
+  background-color: #dc3545;
+  color:white;
+  padding: 3px 20px;
+  border-radius: 50px;
+  border:none;
+ } 
