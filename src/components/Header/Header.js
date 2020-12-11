@@ -20,8 +20,12 @@ const Header = () => {
                             <button className="cartIcon"><FontAwesomeIcon icon={faShoppingCart} /></button>
                         </NavLink>
                     </li>
-                    <li><a href="#" className="logIn">Login</a></li>
-                    <li><a href="#" className="btn-danger signUpBtn">Sign Up</a></li>
+                    {/* {/* <li><a href="#" className="logIn">Login</a></li> */}
+                    <li>
+                        <NavLink to="/Login">
+                            <a href="#" className="btn-danger signUpBtn">Login</a>
+                        </NavLink>
+                    </li> 
                 </ul>
             </div>
         </div>

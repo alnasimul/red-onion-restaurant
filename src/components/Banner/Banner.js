@@ -10,8 +10,8 @@ const Banner = () => {
                         <h1>Best food waiting for your belly</h1>
                         <br/>
                         <div className="searchArea">
-                            <input className="search" type="text" placeholder="Search food items" />
-                            <button className="btn-danger searchBtn ">Search</button>
+                            {/* <input className="search" type="text" placeholder="Search food items" />
+                            <button className="btn-danger searchBtn ">Search</button> */}
                         </div>
                     </div>
                 </div>

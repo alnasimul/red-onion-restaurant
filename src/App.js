@@ -15,35 +15,43 @@ import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Cart from './components/Cart/Cart';
+import GoogleSignIn from './components/Authentication/GoogleSignIn/GoogleSignIn';
+
 
 function App() {
   return (
     <div className="App">
-      <Router>
+
+      
+        <Router>
           <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Banner></Banner>
-            <Shop></Shop>
-            <About></About>
-          </Route>
-          <Route path="/shop">
-            <Banner></Banner>
-            <Shop></Shop>
-            <About></About>
-          </Route>
-          <Route path="/product/:productKey">
-            <ProductDetails></ProductDetails>
-          </Route>
-          <Route path = '/cart'>
+          <Switch>
+            <Route exact path="/">
+              <Banner></Banner>
+              <Shop></Shop>
+              <About></About>
+            </Route>
+            <Route path="/shop">
+              <Banner></Banner>
+              <Shop></Shop>
+              <About></About>
+            </Route>
+            <Route path="/product/:productKey">
+              <ProductDetails></ProductDetails>
+            </Route>
+            <Route path='/cart'>
               <Cart></Cart>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
+            </Route>
+            <Route path='/Login'>
+                <GoogleSignIn></GoogleSignIn>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
           <Footer></Footer>
-      </Router>
+        </Router>
+    
     </div>
   );
 }

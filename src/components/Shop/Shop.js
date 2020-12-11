@@ -44,7 +44,7 @@ const Shop = () => {
                     currentFood.map(food => <FoodItems product={food} key={food.key}></FoodItems>)
                 }
 
-                <button className="checkoutBtn btn-danger">Checkout Your Food</button>
+                {/* <button className="checkoutBtn btn-danger">Checkout Your Food</button> */}
             </div>
 
 
