@@ -7,12 +7,11 @@ const GoogleSignIn = () => {
     const auth = Auth();
     console.log(auth.signInWithGoogle); 
     const handelSignIn = () => {
-        auth.signInWithGoogle();
-       
-        // .then( res => {
-            
-        // })
-        
+        auth.signInWithGoogle()
+        .then(res => {
+            window.location.pathname = '/cart';
+           console.log("redirect now");
+       })
     }
     console.log(auth.user);
     const handelSignOut = () => {
@@ -27,7 +26,7 @@ const GoogleSignIn = () => {
               {
                 auth.user ?   
                 <div>
-                    <button onClick={handelSignOut}>Sign Out</button>
+                    <button onClick={handelSignOut} className="signOutBtn btn btn-danger">Sign Out</button>
                 </div> :
                 <div className="googleSignInBtn">
                 <a className="btn btn-outline-dark" role="button" onClick={handelSignIn} >

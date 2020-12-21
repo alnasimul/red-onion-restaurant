@@ -16,13 +16,14 @@ import NotFound from './components/NotFound/NotFound';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Cart from './components/Cart/Cart';
 import GoogleSignIn from './components/Authentication/GoogleSignIn/GoogleSignIn';
+import { AuthContextProvider, PrivateRoute } from './components/Authentication/useAuth';
+import OrderPlaced from './components/OrderPlaced/OrderPlaced';
 
 
 function App() {
   return (
     <div className="App">
-
-      
+      <AuthContextProvider>
         <Router>
           <Header></Header>
           <Switch>
@@ -39,11 +40,14 @@ function App() {
             <Route path="/product/:productKey">
               <ProductDetails></ProductDetails>
             </Route>
-            <Route path='/cart'>
-              <Cart></Cart>
+            <Route path="/cart">
+             <Cart></Cart>
             </Route>
-            <Route path='/Login'>
-                <GoogleSignIn></GoogleSignIn>
+            <Route path='/orderPlaced'>
+              <OrderPlaced></OrderPlaced>
+            </Route>
+            <Route path='/login'>
+              <GoogleSignIn></GoogleSignIn>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
@@ -51,7 +55,7 @@ function App() {
           </Switch>
           <Footer></Footer>
         </Router>
-    
+      </AuthContextProvider>
     </div>
   );
 }

@@ -1,12 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import fakeData from '../../fakeData'
 import { getDatabaseCart } from '../../utilities/databaseManager';
+import { useAuth } from '../Authentication/useAuth';
 import CartItems from '../CartItems/CartItems';
 import './Cart.css';
 
 const Cart = () => {
+
+    const auth = useAuth();
+    console.log(auth);
 
     const [cartFoods,setCartFoods] = useState([]);
     const [cartPlusChange, setCartPlusChange] = useState(false);
@@ -126,7 +131,9 @@ const Cart = () => {
                         <h4>{(subTotal+tax+fee).toFixed(2)}</h4>
                     </div>
                 </div>
+                {auth.user ? <Link to='orderPlaced'> <button className="btn btn-danger marginTop10px" > Proceed To Checkout </button> </Link> : <a href="login" className="btn btn-danger marginTop10px" type="button">Login To Proceed</a>}
                 </div>
+               
         </div>
     );
 };
