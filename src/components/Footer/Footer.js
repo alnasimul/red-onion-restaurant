@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-white">
-                <p>Copyright © 2020 Online Food.</p>
+                <p>Copyright © { new Date().getFullYear() } Online Food.</p>
             </div>
         </div>
        </div>
