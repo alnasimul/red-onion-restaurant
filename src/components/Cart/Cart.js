@@ -6,14 +6,15 @@ import fakeData from '../../fakeData'
 import { getDatabaseCart } from '../../utilities/databaseManager';
 import { useAuth } from '../Authentication/useAuth';
 import CartItems from '../CartItems/CartItems';
+import OrderForm from '../OrderForm/OrderForm';
 import './Cart.css';
 
 const Cart = () => {
 
     const auth = useAuth();
-    console.log(auth);
 
     const [cartFoods,setCartFoods] = useState([]);
+    const [customerInfo, setCustomerInfo] = useState(null)
     const [cartPlusChange, setCartPlusChange] = useState(false);
 	const [cartSubChange, setCartSubChange] = useState(false);
 
@@ -81,29 +82,45 @@ const Cart = () => {
     },[previousCart.length,cartPlusChange, cartSubChange])
 
 
-   console.log(cartFoods);
+    const getCustomerInfo = data => {
+        setCustomerInfo(data)
+    }
 
+    const orderConfirmation = (cart, customerInfo) => {
+        if(cart && customerInfo){
+           const orderData = { ...customerInfo, cart}
+            fetch(`http://localhost:5000/placeOrder`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(orderData)
+            })
+            .then(res => {
+                if(res.ok){
+                    alert('Your order placed successfully! you will get your order shortly...')
+                }
+            } )
+        }
+        else{
+            alert("Please provide your delivery information to process order")
+        }
+    }
+    console.log(cartFoods);
+    console.log(customerInfo)
     // console.log(subTotal);
     // console.log(tax);
-   console.log(fee);
     
     return (
         <div className="container main-cart">
                <div className="delivery-information">
-                    <h3>Edit Delivery Address</h3>
-                    <form >
-                            <input className="form-control mb-2" type="text" name="method" placeholder="Deliver to:"/>
-                            <input className="form-control mb-2" type="text" name="address" placeholder="Street Name:"/>
-                            <input className="form-control mb-2" type="text" name="additional info" placeholder="House No./Flat/floor no."/>
-                            <input className="form-control mb-2" type="text" name="clientName" placeholder="Business Name"/>
-                            <input className="form-control mb-2" type="text" name="instruction" placeholder="Add Delivery Instruction"/>
-                            <input className="red-button " type="submit" value="Save and Continue" />
-                    </form>
+                   <OrderForm getCustomerInfo={getCustomerInfo}/>
                 </div>
                 <div>
 
                 </div>
-                <div className="review-cart">
+                {
+                    cartFoods.length > 0 ? <div className="review-cart">
                     <p>From <b>Gulshan Plaza</b></p>
                     <p>Arriving in 30-40 minutes</p>
                     <p>107 road no 8</p>
@@ -131,8 +148,11 @@ const Cart = () => {
                         <h4>{(subTotal+tax+fee).toFixed(2)}</h4>
                     </div>
                 </div>
-                {auth.user ? <Link to='orderPlaced'> <button className="btn btn-danger marginTop10px" > Proceed To Checkout </button> </Link> : <a href="login" className="btn btn-danger marginTop10px" type="button">Login To Proceed</a>}
+                {auth.user ?  <button className="btn btn-danger marginTop10px" onClick={() => orderConfirmation(cartFoods, customerInfo)} > Confirm Order </button> : <a href="login" className="btn btn-danger marginTop10px" type="button">Login To Proceed</a>}
+                </div> : <div>
+                    <h2 className='my-5'>Shopping Cart is empty</h2>
                 </div>
+                }
                
         </div>
     );

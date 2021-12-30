@@ -16,8 +16,9 @@ import NotFound from './components/NotFound/NotFound';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Cart from './components/Cart/Cart';
 import GoogleSignIn from './components/Authentication/GoogleSignIn/GoogleSignIn';
-import { AuthContextProvider, PrivateRoute } from './components/Authentication/useAuth';
+import { AuthContextProvider } from './components/Authentication/useAuth';
 import OrderPlaced from './components/OrderPlaced/OrderPlaced';
+import User from './components/User/User';
 
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <GoogleSignIn></GoogleSignIn>
+            </Route>
+            <Route path='/user'>
+              <User/>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

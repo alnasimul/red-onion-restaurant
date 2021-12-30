@@ -1,4 +1,8 @@
+.authArea{
+    margin-top: 150px !important;
+}
 .btn{
+    display: block;
     text-transform: none;
     width:300px;
 }

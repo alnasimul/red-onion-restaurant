@@ -1,20 +1,13 @@
 .footerArea{
-    margin-top: 100px;
+    margin-top: 250px;
     background-color: black;
-    width:1540px;
+    width:100%;
     height:320px;
     padding: 70px 70px;
 }
 
-.footerTop{
-    display: flex;
-}
 
-.otherInfo{
-    display: flex;
-    position: relative;
-    left:1010px;
-}
+
 
 .footerLogo img{
     width:300px;

@@ -4,12 +4,13 @@ import logo from '../../logo.png';
 
 const Footer = () => {
     return (
-        <div className="footerArea">
-            <div className="footerTop">
+       <div className="container-fluid">
+            <div className="footerArea">
+            <div className="d-flex justify-content-between">
                 <div className="footerLogo">
                     <img src={logo} alt="" />
                 </div>
-                <div className="otherInfo">
+                <div className="d-flex  otherInfo">
                     <ul>
                         <li><a href="#"> About online food</a></li>
                         <li><a href="#">Read our blog</a></li>
@@ -24,15 +25,11 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="footerBottom">
+            <div className="text-white">
                 <p>Copyright © 2020 Online Food.</p>
-                <div className="policy">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Pricing</a>
-                </div>
             </div>
         </div>
+       </div>
     );
 };
 

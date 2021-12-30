@@ -40,17 +40,17 @@
 
 .minusIcon{
     color:#bd2130;
-    position: absolute;
-    top: 403px;
-    left: 380px;
+    font-size: 30px;
+    background-color: lightgrey;
+    padding: 5px;
     cursor: pointer;
 }
 
 .plusIcon{
     color:#bd2130;
-    position: absolute;
-    top: 403px;
     width:20px;
-    left:430px;
+    background-color: lightgrey;
+    font-size: 30px;
+    padding: 5px;
     cursor: pointer;
 }

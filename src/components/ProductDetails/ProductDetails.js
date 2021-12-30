@@ -56,14 +56,14 @@ const ProductDetails = () => {
                     <h1>{title}</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea explicabo fugit maiores dolores, vitae alias enim, eum accusantium magni modi dolorum numquam? Nisi cupiditate quasi optio nulla eius beatae nemo!</p>
                 </div>
-                <div className="productPriceQuantity">
+                <div className="d-flex align-items-center  productPriceQuantity">
                     <div className="price">
                         <h2>${price}</h2>
                     </div>
                     <div className="quantity">
-                        <FontAwesomeIcon className="minusIcon" icon={faMinus} onClick={handelSub} />
+                        <FontAwesomeIcon className="minusIcon mt-2 mx-2 border rounded-pill" icon={faMinus} onClick={handelSub} />
                         <input className="form-control" id="quantityNumber" type="text" value={quantity}></input>
-                        <FontAwesomeIcon className="plusIcon" icon={faPlus} onClick={handelAdd} />
+                        <FontAwesomeIcon className="plusIcon mt-2 mx-2 border rounded-pill" icon={faPlus} onClick={handelAdd} />
                     </div>
                 </div>
                 <br />

@@ -24,7 +24,7 @@ const Shop = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <div className="manageCategory">
+                    <div className="manageCategory me-5 pe-3">
                         <ul className="d-flex justify-content-center">
                             <li onClick={() => setCategory('breakfast')}>
                                 <a href="#foodDetails"  className={category === 'breakfast' ? 'active h6' : 'h6'}> Breakfast</a>
